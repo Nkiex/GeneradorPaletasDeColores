@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    background-color: #1d1c1c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 0 2em;
+}
+
+.paleta button{
+    outline: none;
+    border: none;
+    padding: 0.7em 2em;
+    font-size: 1.1em;
+    position: absolute;
+    top: 1em;
+    left: 20%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.paleta button:hover{
+    background: goldenrod;
+    color: white;
+    box-shadow: 0px 0px 15px rgba(109, 39, 39, 0.2);
+}
+.paleta{
+    position: relative;
+    background: #ffffff;
+    width: 45em;
+    height: 25em;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px -12px rgb(0,0,0,0.1);
+    text-align: center;
+    color: #1f1f1f;
+    padding-top: 5em;
+    box-sizing: border-box;
+}
+
+.colores{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: hidden;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.colores > div{
+    width: 25%;
+}
+
+.color{
+    background: #ccc;
+    height: 17em;
+    width: 100%;
+}
+
+.colores h4{
+    font-size: 0.9em;
+}
+
+.fade-in{
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in;
+}
+
+@media screen and (max-width: 500px){
+    body{ padding: 2em; }
+    .paleta{height: initial;}
+    .colores{flex-direction: column;}
+    .colores > div{width: 100%;}
+}
+
+@keyframes fadeIn{
+    to{opacity: 1;}
+}
